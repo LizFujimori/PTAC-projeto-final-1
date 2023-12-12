@@ -20,7 +20,6 @@ export default function registro() {
         setCanal ("");
         setUrl ("")
     }
-
     return (
         <div>
             <div className= "card">

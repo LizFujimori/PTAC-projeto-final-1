@@ -12,7 +12,7 @@ export default function destaque(){
                     <nav class= "sidebar">
                         <ul>
                             <li><a href="./">Home</a></li>
-                            <li><a href="/destaque"></a>Destaques</li>
+                            <li><a href="/destaque.jsx"></a>Destaques</li>
                             <li><a href="/registro">Adicionar Vídeo</a></li>
                         </ul>
                     </nav>
