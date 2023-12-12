@@ -8,12 +8,16 @@ export default function registro() {
     const [Titulo, setTitulo] = useState ("");
     const [Descricao, setDescricao] = useState ("");
     const [Canal, setCanal] = useState ("");
-    const [url, setUrl] = useState ("");
+    const [Url, setUrl] = useState ("");
 
     useEffect (() => {localStorage.setItem ("Lista", JSON.stringify(lista))}, [lista]);
     function salve(e) {
         e.preventDefault();
-        setLista([...lista, {id: id, Titulo: Titulo, Descricao: Descricao, Canal: Canal, url: url}])
-        
+        setLista ([...lista, {id: id, Titulo: Titulo, Descricao: Descricao, Canal: Canal, Url: Url}]);
+        setId (id + 1);
+        setTitulo ("");
+        setDescricao ("");
+        setCanal ("");
+        setUrl ("")
     }
 }
