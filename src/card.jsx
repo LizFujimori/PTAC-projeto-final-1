@@ -9,8 +9,8 @@ export default function Card({ item}) {
             <div className="video-card">
                 <iframe></iframe>
 
-                <h4></h4>
-                <p></p>
+                <h4>{item.titulo}</h4>
+                <p>{item.canal}</p>
             </div>
         </Link>
     )
