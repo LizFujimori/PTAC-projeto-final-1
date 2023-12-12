@@ -1,5 +1,5 @@
-import "./home.css"
-import Card from "./card";
+import './home.css';
+import Card from './card';
 
 export default function Home(){
     const videos = JSON.parse(localStorage.getItem('Lista')) || [];

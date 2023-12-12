@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import Registro from './registro'
-import Destaque from './destaque'
-import Detalhe from './detalhe'
+import Home from './Home';
+import Registro from './registro';
+import Destaque from './destaque';
+import Detalhe from './detalhe';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

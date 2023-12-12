@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Card from "./card";
-import "./home.css"
+import Card from './card';
+import './home.css';
 
 export default function detalhe(){
     const{id} = useParams();
