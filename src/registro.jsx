@@ -26,12 +26,26 @@ export default function registro() {
             <div className= "card">
                 <form onSubmit= {salve}>
                     <div className= "input-container">
-                        <p><label htmlFor= "titulo">Titulo: </label>
+                        <p><label htmlFor= "titulo"> Titulo: </label>
                             <input 
                                 id= "titulo"
                                 onChange= {(e) => setTitulo(e.target.value)}
                                 type= "text"
                                 value= {Titulo}/>
+                        </p>
+                        <p><label htmlFor= "descricao"> Descrição: </label>
+                            <input 
+                                id= "descricao"
+                                onChange= {(e) => setDescricao(e.target.value)}
+                                type= "text"
+                                value= {Descricao}/>
+                        </p>
+                        <p><label htmlFor= "canal"> Canal: </label>
+                            <input 
+                                id= "canal"
+                                onChange= {(e) => setCanal(e.target.value)}
+                                type= "text"
+                                value= {Canal}/>
                         </p>
                     </div>
                 </form>
