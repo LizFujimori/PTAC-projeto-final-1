@@ -47,7 +47,15 @@ export default function registro() {
                                 type= "text"
                                 value= {Canal}/>
                         </p>
+                        <p><label htmlFor= "url"> Url: </label>
+                            <input 
+                                id= "url"
+                                onChange= {(e) => setUrl(e.target.value)}
+                                type= "text"
+                                value= {Url}/>
+                        </p>
                     </div>
+                    <button> Salve </button>
                 </form>
             </div>
         </div>
