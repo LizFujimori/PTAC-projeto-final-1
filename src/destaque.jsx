@@ -1,6 +1,6 @@
-import "./home.css"
+import "style.css"
 import Card from "./card";
-import "./home.css"
+
 
 export default function destaque(){
     const videoP = JSON.parse(localStorage.getItem('Lista')) || [];
