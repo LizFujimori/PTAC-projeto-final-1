@@ -9,4 +9,7 @@ export default function registro() {
     const [Descricao, setDescricao] = useState ("");
     const [Canal, setCanal] = useState ("");
     const [url, setUrl] = useState ("");
+
+    useEffect (() => {localStorage.setItem ("Lista", JSON.stringify(lista))}, [lista]);
+    
 }
