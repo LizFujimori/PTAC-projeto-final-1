@@ -11,5 +11,9 @@ export default function registro() {
     const [url, setUrl] = useState ("");
 
     useEffect (() => {localStorage.setItem ("Lista", JSON.stringify(lista))}, [lista]);
-    
+    function salve(e) {
+        e.preventDefault();
+        setLista([...lista, {id: id, Titulo: Titulo, Descricao: Descricao, Canal: Canal, url: url}])
+        
+    }
 }
