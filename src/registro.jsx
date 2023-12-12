@@ -20,4 +20,22 @@ export default function registro() {
         setCanal ("");
         setUrl ("")
     }
+
+    return (
+        <div>
+            <div className= "card">
+                <form onSubmit= {salve}>
+                    <div className= "input-container">
+                        <p><label htmlFor= "titulo">Titulo: </label>
+                            <input 
+                                id= "titulo"
+                                onChange= {(e) => setTitulo(e.target.value)}
+                                type= "text"
+                                value= {Titulo}/>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    )
 }
