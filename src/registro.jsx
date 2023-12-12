@@ -7,4 +7,6 @@ export default function registro() {
     const [id, setId] = useState (listaLocalStorage [listaLocalStorage.lenght - 1]?.id + 1 || 1);
     const [Titulo, setTitulo] = useState ("");
     const [Descricao, setDescricao] = useState ("");
+    const [Canal, setCanal] = useState ("");
+    const [url, setUrl] = useState ("");
 }
