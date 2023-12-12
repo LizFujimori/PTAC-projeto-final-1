@@ -10,10 +10,10 @@ export default function destaque(){
             <body>
                 <div class= "container">
                     <nav class= "sidebar">
-                        <ul>
-                            <li><a href="./">Home</a></li>
-                            <li><a href="/destaque.jsx"></a>Destaques</li>
-                            <li><a href="/registro">Adicionar Vídeo</a></li>
+                    <ul>
+                            <li><Link to="/Home">Home</Link></li>
+                            <li><Link to="/destaque"></Link>Destaques</li>
+                            <li><Link to="/registro">Adicionar Vídeo</Link></li>
                         </ul>
                     </nav>
                     <div>

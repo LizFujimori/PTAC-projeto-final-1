@@ -30,35 +30,8 @@ body {
     cursor: pointer;
   }
   
-  .todo-item {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .todo-item p {
-    font-size: 1.2em;
-  }
-  
-  .todo-item button {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  .todo-item.completed {
-    text-decoration: line-through;
-  }
-  
-  .todo-item.important {
-    color: red;
-  }
-  
-  .todo-item.today {
-    background-color: #f0f0f0;
-  }
   BODY{
-    background-color: #990F02;
+    background-color: #ffbdb7;
   }
   .container{
     background-color: #FF6961;

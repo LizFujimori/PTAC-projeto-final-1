@@ -4,18 +4,25 @@ import Card from './card';
 import './home.css';
 
 export default function detalhe(){
-    const{id} = useParams();
-    const videoP = JSON.parse(localStorage.getItem('Lista')) || [];
-    const videoU = videoP.find((objeto) => objeto.id == id) || null;
+    const {id} = useParams();
+    const videoP = JSON.parse(localStorage.getItem('videoP')) || [];
+    const videoU = videoP.find((objeto) => {
+        if(objeto.id == id){
+            return objeto;
+        }
+        return null;
+    });
+    console.log(videoP);
+
     return(
         <div>
             <body>
                 <div class= "container">
                     <nav class= "sidebar">
                         <ul>
-                            <li><a href="./">Home</a></li>
-                            <li><a href="/destaque"></a>Destaques</li>
-                            <li><a href="/registro">Adicionar Vídeo</a></li>
+                            <li><Link to="/Home">Home</Link></li>
+                            <li><Link to="/destaque"></Link>Destaques</li>
+                            <li><Link to="/registro">Adicionar Vídeo</Link></li>
                         </ul>
                     </nav>
                     <Card item={videoU}></Card>

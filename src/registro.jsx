@@ -1,19 +1,29 @@
-import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom';
+import {  useState } from "react";
+import { useEffect } from 'react';
+import "./home.css";
 
 export default function registro() {
     const listaLocalStorage = JSON.parse (localStorage.getItem("Lista"))
-    const [lista, setLista] = useState (listaLocalStorage);
+    const [lista, setLista] = useState (listaLocalStorage || []);
     const [id, setId] = useState (listaLocalStorage [listaLocalStorage.length - 1]?.id + 1 || 1);
-    const [Titulo, setTitulo] = useState ("");
-    const [Descricao, setDescricao] = useState ("");
-    const [Canal, setCanal] = useState ("");
-    const [Url, setUrl] = useState ("");
+    const [Titulo, setTitulo] = useState ();
+    const [Descricao, setDescricao] = useState ();
+    const [Canal, setCanal] = useState ();
+    const [Url, setUrl] = useState ();
 
-    useEffect (() => {localStorage.setItem ("Lista", JSON.stringify(lista))}, [lista]);
-    function salve(e) {
+    useEffect (() => {
+        localStorage.setItem ("lista", JSON.stringify(lista))
+    }, [lista]);
+
+    const salve = (e) => {
         e.preventDefault();
-        setLista ([...lista, {id: id, Titulo: Titulo, Descricao: Descricao, Canal: Canal, Url: Url}]);
+        setLista ([...lista, {
+            id: id, 
+            Titulo: Titulo, 
+            Descricao: Descricao, 
+            Canal: Canal, 
+            Url: Url
+        }]);
         setId (id + 1);
         setTitulo ("");
         setDescricao ("");
@@ -21,42 +31,34 @@ export default function registro() {
         setUrl ("")
     }
     return (
-        <div>
-            <div className= "card">
+        <div class="input-container">
+            <Link to="/">Home</Link>
                 <form onSubmit= {salve}>
-                    <div className= "input-container">
-                        <p><label htmlFor= "titulo"> Titulo: </label>
-                            <input 
-                                id= "titulo"
-                                onChange= {(e) => setTitulo(e.target.value)}
-                                type= "text"
-                                value= {Titulo}/>
-                        </p>
-                        <p><label htmlFor= "descricao"> Descrição: </label>
-                            <input 
-                                id= "descricao"
-                                onChange= {(e) => setDescricao(e.target.value)}
-                                type= "text"
-                                value= {Descricao}/>
-                        </p>
-                        <p><label htmlFor= "canal"> Canal: </label>
-                            <input 
-                                id= "canal"
-                                onChange= {(e) => setCanal(e.target.value)}
-                                type= "text"
-                                value= {Canal}/>
-                        </p>
-                        <p><label htmlFor= "url"> Url: </label>
-                            <input 
-                                id= "url"
-                                onChange= {(e) => setUrl(e.target.value)}
-                                type= "text"
-                                value= {Url}/>
-                        </p>
-                    </div>
+                <h3> Titulo: </h3>
+                    <input type="text"
+                    value={Titulo}
+                    onChange={(e) => { setTitulo(e.target.value) }}
+                    />
+
+                <h3> Descrição: </h3>
+                    <input type="text"
+                    value={Descricao}
+                    onChange={(e) => { setDescricao(e.target.value) }}
+                    />
+
+                <h3> Canal: </h3>
+                    <input type="text"
+                    value={Canal}
+                    onChange={(e) => { setCanal(e.target.value) }}
+                />
+
+                <h3> Url: </h3>
+                    <input type="text"
+                    value={Url}
+                    onChange={(e) => { setUrl(e.target.value) }}
+                />
                     <button> Salve </button>
                 </form>
-            </div>
         </div>
     )
 }
