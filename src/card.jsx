@@ -8,6 +8,9 @@ export default function Card({ item}) {
         <Link to={'/detalhe/${item.id}'}>
             <div className="video-card">
                 <iframe></iframe>
+
+                <h4></h4>
+                <p></p>
             </div>
         </Link>
     )
